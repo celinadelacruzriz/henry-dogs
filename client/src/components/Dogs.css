@@ -1,0 +1,52 @@
+body {
+      background-color: beige;
+}
+
+.containerDogs {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      /* margin-left: 150px; */
+
+}
+
+.agrupador {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+}
+
+.agrupador div {
+      align-items: center;
+}
+
+.dogs {
+      display: flex;
+      justify-content: center;
+      flex-flow: row;
+      flex-wrap: wrap;
+}
+
+.botonDetail {
+      grid-area: 5 / 2 / 6 / 3;
+      align-self: center;
+      justify-self: center;
+}
+
+.botonDetail button {
+      display: inline-block;
+      color: white;
+      margin-left: 1rem;
+      text-align: center;
+      background-color: #9f8e10;
+      border: 1px solid white;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+}
+
+.botonDetail button:hover {
+      box-shadow: 0px 2px 4px whitesmoke;
+      background-color: #d0c042;
+}
