@@ -1,0 +1,48 @@
+.contDetail {
+  background-image: url("../images/detailDog.jpg");
+  margin: 0;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: "Comic Neue", cursive;
+  text-align: center;
+}
+
+.contDetail nav {
+  height: 50px;
+  background-color: rgb(134, 5, 80);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  font-family: "Comic Neue", cursive;
+  color: rgb(200, 35, 35);
+  text-shadow: white;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back img {
+  width: 50%;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.parr {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: rgba(238, 132, 132, 0.8);
+  padding: 1px;
+}

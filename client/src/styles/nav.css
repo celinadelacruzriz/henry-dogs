@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  height: 80px;
+  background-color: rgb(245, 64, 64);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-size: 800px;
+}
+
+.button {
+  cursor: pointer;
+  margin-top: 10px;
+  border: 1px, black;
+  color: black;
+  font-size: 15px;
+}

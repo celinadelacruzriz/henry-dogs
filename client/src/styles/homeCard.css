@@ -1,0 +1,48 @@
+.cardComp {
+  background-color: darkred;
+  background-position: absolute;
+  background: cover;
+  display: grid;
+  border-radius: 25px;
+  margin: 2%;
+  padding: 1em;
+  vertical-align: text-top;
+  width: 33, 5%;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+  text-align: center;
+}
+
+.cardComp h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+}
+
+
+.cardComp img {
+  justify-self: center;
+  height: fit-content;
+  border-radius: 25px;
+  ;
+
+}
+
+.typeOfT {
+  color: rgb(247, 177, 182);
+  text-decoration: underline;
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.cardComp h5 {
+  font-style: italic;
+  font-size: medium;
+}

@@ -1,0 +1,42 @@
+.home {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background-image: url("../images/perrites.png");
+  font-family: "Comic Neue", cursive;
+}
+
+.home h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-style: Bold 700 italic;
+  color: rgb(211, 194, 102);
+  text-shadow: rgb(19, 19, 18) -3px 1px;
+}
+
+.home h3 {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.homeCard {
+  margin-left: 1%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.tempsMap {
+  margin-top: 2px;
+  margin-bottom: 0;
+}

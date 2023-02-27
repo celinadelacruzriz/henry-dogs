@@ -1,25 +1,20 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Nav from './components/Nav';
-import Dogs from './components/Dogs';
-import Landing from './components/Landing';
-import DogDetail from './components/DogDetail';
-import DogCreate from './components/DogCreate';
-import Mensaje from './components/Mensaje';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../src/components/Home";
+import Detail from '../src/components/Detail';
+import BreedCreate from '../src/components/BreedCreate';
+import Landing from '../src/components/Landing';
 
 function App() {
-
   return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path='/dogs' element={<Dogs />} />
-        <Route path='/dogs/:id' element={<DogDetail />} />
-        <Route path='/dog' element={<DogCreate />} />
-        <Route path='/msj' element={<Mensaje />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Landing />} />
+      <Route exact path="/dogs" element={<Home />} />
+      <Route exact path="/dogs/:id" element={<Detail />} />
+      <Route exact path="/newBreed" element={<BreedCreate />} />
+    </Routes>
+
   );
 }
 

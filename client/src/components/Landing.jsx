@@ -1,25 +1,21 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { clearAllDogs } from '../redux/actions/actions';
-import { useDispatch } from 'react-redux';
-import './Landing.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/landing.css";
 
 export default function Landing() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(clearAllDogs())
-  }, [dispatch])
-
   return (
-    <div>
-      <div className="container" >
-        <div className="bienvenida">
-              <h1>PI - Maria Celina de la Cruz Riz</h1>
-              <Link to="dogs">
-                <button type="button">Start</button>
-              </Link>
-        </div>
+    <div className="landing">
+      <div>
+        <h1>Bienvenid@s</h1>
+      </div>
+      <div className="center">
+        <h2>María Celina de la Cruz Riz - PT 10A</h2>
+      </div>
+      <div className="footer">
+        <Link to="/dogs" className="button">
+          <button>{` ENTRAR `}</button>
+        </Link>
       </div>
     </div>
-  )}
+  );
+}

@@ -1,0 +1,28 @@
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.pageButton {
+  cursor: pointer;
+  margin-top: 10px;
+  padding-left: 10px;
+  border: 1px, black;
+  color: black;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pageButton:hover {
+  color: blueviolet;
+  background-color: black;
+}
+
+.itemSelected {
+  color: black;
+  background-color: blueviolet;
+}
