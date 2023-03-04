@@ -1,0 +1,5 @@
+* ver porque el perro creado nuevo me lo pone a lo ultimo cuando pongo todos los perritos
+ chequear con el de foods, como manejaba el tema de el id
+ * ver de hacer responsive la pagina, que no se rompa cuando cambia de tamaño.
+ * hacer testing
+ * poner boton eliminar -->HECHO!!!

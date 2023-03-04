@@ -1,6 +1,6 @@
 import {
       GET_BREEDS, GET_SEARCH, DETAIL_BREEDS, LOADING, CLEAN,
-      FILTER_TEMPERAMENT, FILTER_BREED, GET_TEMPERAMENTS, ORDER_BY, ADD_BREED
+      FILTER_TEMPERAMENT, FILTER_BREED, GET_TEMPERAMENTS, ORDER_BY, ADD_BREED, DELETE_DOG
 } from "../actions/actions";
 import { A_Z, Z_A, WEIGHT_MAX, WEIGHT_MIN } from "../../const/const_order";
 
@@ -15,7 +15,7 @@ const initialState = {
       loading: false,
 }
 
-export default function reducer(state = initialState, action) {
+function reducer(state = initialState, action) {
       switch (action.type) {
             case GET_BREEDS:
                   return {
@@ -61,7 +61,6 @@ export default function reducer(state = initialState, action) {
                   return {
                         ...state,
                         breeds: orderAz
-
                   }
             case FILTER_TEMPERAMENT:
                   let allTemperaments = [...state.breedsClean]
@@ -103,11 +102,7 @@ export default function reducer(state = initialState, action) {
                         newBreed: action.payload
 
                   }
-            // case FAIL:
-            //     return{
-            //         ...state,
-            //         error: action.payload
-            //     }   
+
             case LOADING:
                   return {
                         ...state,
@@ -118,7 +113,14 @@ export default function reducer(state = initialState, action) {
                         ...state,
                         breedsDetail: []
                   }
+            case DELETE_DOG:
+                  return {
+                        ...state,
+                        breeds: state.breeds.filter(br => br.id !== action.payload)
+                  }
             default:
                   return { ...state }
       }
 }
+
+export default reducer;

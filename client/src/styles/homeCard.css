@@ -1,6 +1,6 @@
 .cardComp {
   background-color: darkred;
-  background-position: absolute;
+  background-position: relative;
   background: cover;
   display: grid;
   border-radius: 25px;
@@ -9,6 +9,16 @@
   vertical-align: text-top;
   width: 33, 5%;
   text-decoration: none;
+}
+
+.btnClose {
+  color: rgb(3, 3, 3);
+  border-radius: 50px;
+  size: 10px;
+  font-family: cursive;
+  font-weight: bold;
+  float: right;
+
 }
 
 a:link {

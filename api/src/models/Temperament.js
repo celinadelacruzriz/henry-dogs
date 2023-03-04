@@ -15,6 +15,6 @@ module.exports = (sequelize) => {
             }
       }, {
             timestamps: false,
-            freezeTableName: true,
+            freezeTableName: true, // para evitar el plural en la tabla
       });
 };

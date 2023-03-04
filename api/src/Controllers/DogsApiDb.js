@@ -5,7 +5,7 @@ const { API_KEY } = process.env;
 
 
 
-const getBreedsApiDb = async (req, res) => {
+const getBreedsApiDb = async () => {
 
       try {
             const allDogs = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
@@ -101,14 +101,7 @@ const getBreedsID = async (req, res) => {
 
 const postCreatedBreed = async (req, res) => {
       const { name, heightMin, heightMax, weightMin, weightMax, life_span_min, life_span_max, temperament, image } = req.body;
-      //var nameFind = await getBreedsApiDb();    
       try {
-            // var aux = nameFind.filter(e => e.name === name)
-
-            // if(aux.length !== 0){
-            //    console.log(aux)
-            //     res.status(404).send({"msg": "Nombre repetido"})
-            // } else if(aux.length === 0){
             const newBreed = await Dog.create({
                   name,
                   heightMin,
@@ -121,8 +114,9 @@ const postCreatedBreed = async (req, res) => {
 
             });
             //console.log(newBreed)
-            await newBreed.addTemperaments(temperament)
-            res.status(201).json(newBreed).send({ "msg": "Breed Created" })
+            let breedDb = await Temperament.findAll({ where: { name: temperament } });
+            newBreed.addTemperaments(breedDb)
+            res.send({ "msg": "Breed Created" })
             // }
       } catch (error) {
             console.log(error)

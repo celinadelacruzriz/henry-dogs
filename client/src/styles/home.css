@@ -1,3 +1,14 @@
+@media (max-width: 800px) {
+  .homeCard {
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: (1fr);
+    gap: 10em;
+    margin-bottom: 20em;
+  }
+
+}
+
 .home {
   margin: 0;
   padding: 0;
@@ -19,6 +30,18 @@
   text-shadow: rgb(19, 19, 18) -3px 1px;
 }
 
+.home h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-style: Bold 700 italic;
+  color: rgb(144, 250, 5);
+  background-color: black;
+}
+
+
 .home h3 {
   text-decoration: none;
 }
@@ -34,9 +57,24 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 60px;
+
+}
+
+.border {
+  background-color: rgb(250, 248, 248);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
 }
 
 .tempsMap {
   margin-top: 2px;
   margin-bottom: 0;
+}
+
+.notFind {
+  margin-left: 1%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
 }

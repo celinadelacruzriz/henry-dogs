@@ -21,6 +21,7 @@ const validationsForm = (form) => {
   let errors = {}; //esta variable guarda los errores
   let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/; //expresion regular valida que solo se acepten mayúsculas y minúsculas
   let regexNumbers = /^[0-9]\d*(\.\d+)?$/; //  /[0-9]/ es otra expresión regular para numeros
+  const regexImage = /(https?:\/\/.*\.(?:png|jpg|gif))/;
 
   if (!form.name.trim()) {
     //el trim() evalua que tenga información, que no haya espacios en blanco
@@ -96,10 +97,10 @@ const validationsForm = (form) => {
     errors.life_span_max =
       "La esperanza máxima de vida no debe ser mayor a 20 años";
   }
-  if (form.image === "") {
+
+  if (!regexImage.test(form.image)) {
     form.image =
       "https://i.pinimg.com/564x/9b/92/b4/9b92b4f32a1c318c406796016bc9bd1c.jpg";
-    errors.image = "Si no ingresa URL se establece imagen predeterminada";
   }
 
   if (form.temperament.length === 0) {
@@ -130,7 +131,6 @@ const AddBreed = () => {
             <Link to="/dogs">
               <button className="button"> Home </button>
             </Link>
-
             <input type="submit" value="Create" className="button" />
           </div>
           <h4 className="title"> Create New Breed</h4>
@@ -260,7 +260,7 @@ const AddBreed = () => {
               onBlur={handleBlur}
               onChange={handleChange}
               value={form.image}
-              require="true"
+              require="false"
             />
             {errors.image && <span className="error">{errors.image}</span>}
           </div>
@@ -269,6 +269,7 @@ const AddBreed = () => {
             <div>
               <select
                 onChange={handleTemperaments}
+                onBlur={handleBlur}
                 require="true"
                 className="select">
                 <option disabled defaultValue="Temperaments">

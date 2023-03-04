@@ -7,9 +7,9 @@ export const FILTER_BREED = 'FILTER_BREED';
 export const FILTER_TEMPERAMENT = 'FILTER_TEMPERAMENT';
 export const ORDER_BY = 'ORDER_BY';
 export const ADD_BREED = 'ADD_BREED';
-export const FAIL = 'FAIL';
 export const LOADING = 'LOADING';
 export const CLEAN = 'CLEAN';
+export const DELETE_DOG = 'DELETE_DOG';
 
 export const getBreeds = () => async dispatch => {
       await axios.get('http://localhost:3001/dogs')
@@ -52,7 +52,6 @@ export const getBreedsId = (id) => async dispatch => {
 }
 
 export const createBreed = (payload) => async dispatch => {
-
       try {
             await axios.post('http://localhost:3001/dogs', payload)
                   .then(response => {
@@ -106,4 +105,13 @@ export function clean() {
             type: CLEAN,
 
       }
+}
+
+export function delete_dog(id) {
+      return async function (dispatch) {
+            dispatch({
+                  type: DELETE_DOG, payload: id
+            });
+      }
+
 }

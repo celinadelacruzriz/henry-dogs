@@ -30,30 +30,42 @@ export default function Breeds() {
       <div>
         <Nav paginate={paginate} />
       </div>
-      <div className="center">
-        <Pagination
-          postPerPage={postPerPage}
-          totalPost={breeds.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
-      </div>
       <div>
         {breeds.length === 0 ? (
-          <div>" "</div>
-        ) : (
-          <div className="homeCard">
-            {currentPosts.map((e) => (
-              <HomeCard
-                key={e.id}
-                id={e.id}
-                img={e.image}
-                name={e.name}
-                weightMin={e.weightMin}
-                weightMax={e.weightMax}
-                temperament={e.temperament}
+          <>
+            <div className="notFind">
+              <img
+                src="https://i2.wp.com/revista.weepec.com/wp-content/uploads/2017/04/caminar.gif?zoom=1.5&resize=500%2C317&ssl=1"
+                alt="Loading..."
               />
-            ))}
+              <div>
+                <h2>LOADING...</h2>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div>
+            <div className="center">
+              <Pagination
+                postPerPage={postPerPage}
+                totalPost={breeds.length}
+                paginate={paginate}
+                currentPage={currentPage}
+              />
+            </div>
+            <div className="homeCard">
+              {currentPosts.map((e) => (
+                <HomeCard
+                  key={e.id}
+                  id={e.id}
+                  img={e.image}
+                  name={e.name}
+                  weightMin={e.weightMin}
+                  weightMax={e.weightMax}
+                  temperament={e.temperament}
+                />
+              ))}
+            </div>
           </div>
         )}
       </div>

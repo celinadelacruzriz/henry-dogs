@@ -36,7 +36,10 @@ export const useForm = (initialForm, validateForm) => {  // por parámetros lleg
       };
 
       const handleBlur = (e) => {  // esta función lanza las validaciones al perder el foco las propiedades del formulario.
-            handleChange(e)          //
+            setForm({
+                  ...form,                           //se pasa una copia del formulario
+                  [e.target.name]: e.target.value    //se hace el cambio por el evento que entra por parametro
+            });
             setErrors(validateForm(form)) //validateForm se ejecuta dentro del estado de error, y llenara el objeto vacío con los errores 
       };
 
