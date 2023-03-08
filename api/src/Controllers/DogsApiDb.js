@@ -62,7 +62,8 @@ const getBreedsApiDb = async () => {
                   }
             })
             //console.log(dbDogs)
-            var allBreedsApiDb = [...allBreeds, ...dbBreeds]
+            var allBreedsApiDb = [...allBreeds, ...dbBreeds];
+            allBreedsApiDb.sort((a, b) => { a.name < b.name })
             return allBreedsApiDb
 
       } catch (error) { console.log(error) }
@@ -114,8 +115,8 @@ const postCreatedBreed = async (req, res) => {
 
             });
             //console.log(newBreed)
-            let breedDb = await Temperament.findAll({ where: { name: temperament } });
-            newBreed.addTemperaments(breedDb)
+            let tempDb = await Temperament.findAll({ where: { name: temperament } });
+            newBreed.addTemperaments(tempDb)
             res.send({ "msg": "Breed Created" })
             // }
       } catch (error) {

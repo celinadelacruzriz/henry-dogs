@@ -1,15 +1,44 @@
 .buttonSearch {
   cursor: pointer;
-  margin-top: 10px;
   border: 1px, black;
-  color: black;
-  font-size: 15px;
+  color: rgb(255, 255, 255);
+  background-color: darkred;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 3px;
 }
 
 .input {
   color: rgb(56, 2, 61);
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 28px;
+  height: 30px;
+  font-weight: normal;
   text-align: center;
-  margin-bottom: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1050px) {
+
+  .buttonSearch {
+    cursor: pointer;
+    color: darkred;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 3px
+  }
+
+  .input {
+    color: rgb(56, 2, 61);
+    font-size: 25px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 2px;
+    text-align: center;
+  }
 }

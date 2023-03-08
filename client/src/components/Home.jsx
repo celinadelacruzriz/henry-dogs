@@ -44,8 +44,8 @@ export default function Breeds() {
             </div>
           </>
         ) : (
-          <div>
-            <div className="center">
+          <div className="pg-container">
+            <div className="paginate">
               <Pagination
                 postPerPage={postPerPage}
                 totalPost={breeds.length}

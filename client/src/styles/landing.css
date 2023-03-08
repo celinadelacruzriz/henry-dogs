@@ -25,7 +25,7 @@
       font-family: "Comic Neue", cursive;
 }
 
-.info h2 {
+.landing h2 {
       height: 20px;
       margin: 2%;
       border: 1%;
@@ -39,7 +39,6 @@
 }
 
 .landing button {
-      border-radius: 75px;
       width: 100px;
       height: 45px;
       background-color: rgb(182, 21, 21);
@@ -57,42 +56,40 @@
       color: rgb(199, 35, 35);
 }
 
-.center {
-      text-align: center;
-}
-
-.footer {
-      align-items: center;
-      margin-top: 25%;
-      margin-left: 550px;
-      font-family: "Comic Neue", cursive;
-}
-
 @media only screen and (max-width: 800px) {
       .landing {
             background-color: rgb(203, 90, 248);
             background-image: none;
-      }
-
-      div .center {
-            display: block;
-            text-align: center;
-      }
-
-      .footer {
-            display: block;
-            text-align: center;
-            margin-top: auto;
-            margin-left: auto;
-
+            padding: 0;
       }
 
       .landing h1,
-      h2,
-      button {
-            display: table-row-group;
-            justify-content: center;
+      h2 {
+
+            margin: 0;
+            border: 1em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            text-align: center;
             position: static;
+            display: block;
+      }
+
+      .landing button {
+            width: 100%;
+            border-radius: 0px;
+            background-color: rgb(182, 21, 21);
+            cursor: pointer;
+            color: #fbfafc;
+            font-family: "Comic Neue", cursive;
+            align-self: baseline;
+
+
+      }
+
+      .landing button:hover {
+            background-color: #faf9f8;
+            color: rgb(199, 35, 35);
 
       }
 }

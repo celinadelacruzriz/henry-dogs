@@ -29,14 +29,7 @@ export default function Pagination({
           }>
           {number}
         </button>
-        // <button
-        //   key={number}
-        //   className="page-item"
-        //   onClick={() => paginate(number)}>
-        //   {number}
-        // </button>
       ))}
-
       <button
         className="pageButton"
         onClick={() =>

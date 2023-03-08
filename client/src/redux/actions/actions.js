@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 export const GET_BREEDS = 'GET_BREEDS';
 export const GET_SEARCH = 'GET_SEARCH';
 export const DETAIL_BREEDS = 'DETAIL_BREEDS';
@@ -10,6 +11,7 @@ export const ADD_BREED = 'ADD_BREED';
 export const LOADING = 'LOADING';
 export const CLEAN = 'CLEAN';
 export const DELETE_DOG = 'DELETE_DOG';
+
 
 export const getBreeds = () => async dispatch => {
       await axios.get('http://localhost:3001/dogs')

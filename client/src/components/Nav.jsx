@@ -14,14 +14,15 @@ export default function Nav({ paginate }) {
       <button onClick={() => window.location.reload()} className="button">
         Home
       </button>
+      <span>
+        <SearchName paginate={paginate} />
 
-      <SearchName paginate={paginate} />
+        <Orders paginate={paginate} />
 
-      <Orders paginate={paginate} />
+        <FilterBreeds paginate={paginate} />
 
-      <FilterBreeds paginate={paginate} />
-
-      <FilterTemperaments paginate={paginate} />
+        <FilterTemperaments paginate={paginate} />
+      </span>
 
       <Link to="/newBreed">
         <button className="button">Add New Breed</button>

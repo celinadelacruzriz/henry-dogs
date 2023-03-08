@@ -1,16 +1,7 @@
-@media (max-width: 800px) {
-  .homeCard {
-    margin-left: auto;
-    display: grid;
-    grid-template-columns: (1fr);
-    gap: 10em;
-    margin-bottom: 20em;
-  }
-
-}
-
 .home {
   margin: 0;
+  overflow: hidden;
+
   padding: 0;
   width: 100%;
   height: auto;
@@ -41,14 +32,8 @@
   background-color: black;
 }
 
-
 .home h3 {
   text-decoration: none;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
 }
 
 .homeCard {
@@ -57,7 +42,16 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 60px;
+}
 
+.pg-container {
+  margin: 1px;
+  padding: 1px;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
 }
 
 .border {
@@ -77,4 +71,50 @@
   display: grid;
   justify-content: center;
   text-align: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .homeCard {
+    margin-left: auto;
+    display: -moz-grid-group;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-bottom: 5px;
+  }
+
+  .home {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background-image: none;
+    background-color: rgb(240, 92, 92);
+    font-family: "Comic Neue", cursive;
+  }
+
+  .home h1 {
+    display: -ms-flexbox;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-style: Bold 700 italic;
+    color: rgb(211, 194, 102);
+    text-shadow: rgb(19, 19, 18) -3px 1px;
+  }
+
+  .home h2 {
+    display: -ms-flexbox;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-style: Bold 700 italic;
+    color: rgb(144, 250, 5);
+    background-color: black;
+  }
+
+
 }

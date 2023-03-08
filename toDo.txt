@@ -1,0 +1,6 @@
+* ver porque el perro creado nuevo me lo pone a lo ultimo cuando pongo todos los perritos
+ chequear con el de foods, como manejaba el tema de el id --> no hecho...
+ * ver de hacer responsive la pagina, que no se rompa cuando cambia de tamaño. --> mas o enos hecho!!
+ * hacer testing--> model HECHO!! falta cliente
+ * poner boton eliminar -->HECHO!!!
+*HACER COMPONENTE TONTO QUE PUESTRE PANTALLA SOLAMENTE EN CONSTRUCCION PARA EL LOGIN

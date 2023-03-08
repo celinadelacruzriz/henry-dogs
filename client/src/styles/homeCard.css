@@ -56,3 +56,64 @@ a:link {
   font-style: italic;
   font-size: medium;
 }
+
+@media only screen and (max-width: 1050px) {
+  .cardComp {
+    background-color: darkred;
+    background-position: relative;
+    background: cover;
+    display: grid;
+    border-radius: 25px;
+    margin: 2%;
+    padding: 1em;
+    vertical-align: text-top;
+    width: 33, 5%;
+    text-decoration: none;
+  }
+
+  .btnClose {
+    color: rgb(3, 3, 3);
+    border-radius: 50px;
+    size: 10px;
+    font-family: cursive;
+    font-weight: bold;
+    float: right;
+
+  }
+
+  a:link {
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .cardComp h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+  }
+
+
+  .cardComp img {
+    justify-self: center;
+    height: fit-content;
+
+  }
+
+  .typeOfT {
+    color: rgb(247, 177, 182);
+    text-decoration: none;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  .cardComp h5 {
+    font-style: italic;
+    font-size: small
+  }
+
+
+}
