@@ -64,7 +64,6 @@ function reducer(state = initialState, action) {
                   }
             case FILTER_TEMPERAMENT:
                   let allTemperaments = [...state.breedsClean]
-                  //if(action.payload === 'All Temperaments') return {...state, breeds: state.breeds}
                   let aux2 = action.payload === 'All Temperaments' ? allTemperaments : allTemperaments.filter(el => el.temperament.includes(action.payload))
                   console.log(aux2)
                   return {

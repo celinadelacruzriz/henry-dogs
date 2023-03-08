@@ -37,7 +37,7 @@ export default function Detail(_props) {
                 <div key={breedId.id}>
                   <div className="parr">
                     <img className="img" src={breedId.image} alt="img" />
-                    <h3>Name: {breedId.name}</h3>
+                    <h3 clasaName="fondo">Name: {breedId.name}</h3>
                     <div>
                       <h4>Weight:</h4>{" "}
                       <p>
